@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>Hello Java DOM</h2>
-    <h2>Hello Java DOM</h2>
-    <h2>Hello Java DOM</h2>
-    <h2>Hello Java DOM</h2>
-    <h2>Hello Java DOM</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM practice</title>
+    <style>
+      .imges {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container{
+    margin-bottom: 100px;
+}
+      .orange-bg{
+    background-color: #fceae8;
+    border-radius: 10px;
+    }
+      #subscribe{
+    height: 300px;
+        }
+        #subscribe h6{
+            color: gray;
+        }
+        .change{
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
     <h2>Hello Java DOM</h2>
     <h2>Hello Java DOM</h2>
     <h2>Hello Java DOM</h2>
@@ -19,11 +37,38 @@
     <h2>Hello Java DOM</h2>
     <h2>Hello Java DOM</h2>
 
+    <div id="data-hover" class="imges">
+        <img  id="img" onmouseover="change1()" onmouseout="change2()" src="./images/bags/bag-1.png" alt="" srcset="" width="25%" />
+      </div>
+       <!-- last part  -->
+      <div
+      class="container  orange-bg"id="subscribe">
+      <div class="change">
+        <h1 id="change">Click and change color</h1>
+        <input id="inputremove" placeholder="Email type" type="text" /><br>
+        <button id="delete" disabled >SUBMIT</button>
+      </div>
+    </div>
+
     <script>
-       const allcolor= document.querySelectorAll('h2');
-       for( const color of allcolor){
-           color.style.color='red'
-       }
+        document.getElementById('delete').addEventListener('click',function(){
+            document.getElementById('change').style.display='none'
+        })
+        document.getElementById('inputremove').addEventListener('keyup',function (e){
+            const remove =document.getElementById('delete');
+           if(e.target.value =='email'){
+                remove.removeAttribute('disabled');
+
+            }
+            else{
+                remove.setAttribute('disabled',true);
+            }
+            
+        })
+   
     </script>
-</body>
+  
+    <script src="js/pratice.js"></script>
+  
+  </body>
 </html>

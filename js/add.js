@@ -39,4 +39,32 @@ document.getElementById('inputremove').addEventListener('keyup',function(e){
     deletes.value='';
 
   })
+
+  // change bagpack mouse over
+
+//number 1 card
+  function change1(){
+    document.getElementById('images').src='./images/bags/bag-2.png'
+  }
+  
+  function change2(){
+    document.getElementById('images').src='./images/bags/bag-1.png'
+  }
+  // number 2 card
+  function change3(){
+    document.getElementById('images-2').src='./images/bags/bag-1.png'
+  }
+  
+  function change4(){
+    document.getElementById('images-2').src='./images/bags/bag-2.png'
+  }
+  //number 3 card
+  function change5(){
+    document.getElementById('images-3').src='./images/bags/bag-2.png'
+  }
+  
+  function change6(){
+    document.getElementById('images-3').src='./images/bags/bag-3.png'
+  }
+
   
